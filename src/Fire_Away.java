@@ -19,9 +19,6 @@ public class Fire_Away {
         String fileName = "";
 
         try {
-            File workingDirectory = new File(System.getProperty("user.dir"));
-            chooser.setCurrentDirectory(workingDirectory);
-
             if (chooser.showOpenDialog(null)==JFileChooser.APPROVE_OPTION)
             {
                 selectedFile = chooser.getSelectedFile();
@@ -49,7 +46,6 @@ public class Fire_Away {
                 System.out.println("\n\nData file read!");
                 System.out.println();
             }
-
             else
             {
                 System.out.println("Please select a file and try again");
@@ -57,6 +53,7 @@ public class Fire_Away {
             }
         }
         finally {
+            //Output
             System.out.println("The name of this file is: "+fileName);
             System.out.println("The line count of this file is: "+lineCount);
             System.out.println("The word count of this file is: "+wordCount);
